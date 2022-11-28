@@ -13,7 +13,10 @@
 #   1  |  1  |  0  |       0       |       0
 #   1  |  1  |  1  |       0       |       0
 
-x, y, z = list(map(bool, map(int, input(
-    'Введите X,Y,Z (через пробел; 1 = True; 0 = False): ').split())))
-result = (not (x or y or z)) == (not x and not y and not z)
-print(f'Результат: {result}')
+values = [True, False]
+for x in values:
+    for y in values:
+        for z in values:
+            print(x, y, z)
+            result = (not (x or y or z)) == (not x and not y and not z)
+            print(f'{result}\n')
